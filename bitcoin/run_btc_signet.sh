@@ -1,16 +1,16 @@
 docker run \
-  -v ${PWD}/data/testnet4:/home/bitcoin/.bitcoin \
+  -v ${PWD}/data/signet:/home/bitcoin/.bitcoin \
   -d \
-  --name bitcoin-testnet4 \
-  -p 18443:18443 \
-  -p 18444:18444 \
+  --name bitcoin-signet \
+  -p 38333:18443 \
+  -p 38334:18444 \
   bitcoin/bitcoin:28.0 \
   -printtoconsole \
-  -testnet4=1 \
+  -signet=1 \
   -rest \
   -rpcbind=0.0.0.0 \
   -rpcallowip=0.0.0.0/0 \
-  -rpcport=18443 \
+  -rpcport=38333 \
   -rpcuser=username \
   -rpcpassword=userpswd \
   -server \
