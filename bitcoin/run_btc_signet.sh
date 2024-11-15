@@ -2,15 +2,15 @@ docker run \
   -v ${PWD}/data/signet:/home/bitcoin/.bitcoin \
   -d \
   --name bitcoin-signet \
-  -p 38333:18443 \
-  -p 38334:18444 \
+  -p 38332:38332 \
+  -p 38333:38333 \
   bitcoin/bitcoin:28.0 \
   -printtoconsole \
   -signet=1 \
   -rest \
   -rpcbind=0.0.0.0 \
   -rpcallowip=0.0.0.0/0 \
-  -rpcport=38333 \
+  -rpcport=38332 \
   -rpcuser=username \
   -rpcpassword=userpswd \
   -server \
