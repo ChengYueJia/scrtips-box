@@ -1,0 +1,40 @@
+# `$HOME/.cargo/config` or `project/.cargo/config`
+
+
+# use private git as crate
+[net]
+git-fetch-with-cli = true
+
+[source.crates-io]
+registry = "https://github.com/rust-lang/crates.io-index"
+
+replace-with = 'sjtu'
+
+[source.ustc]
+registry = "https://mirrors.ustc.edu.cn/crates.io-index"
+
+[source.sjtu]
+registry = "https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/"
+[source.tuna]
+registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
+
+# rustcc community
+[source.rustcc]
+registry = "https://code.aliyun.com/rustcc/crates.io-index.git"
+
+
+
+
+
+
+# fixup: rust error: linking with `cc` failed: exit code: 1
+[target.'cfg(target_os = "linux")']
+rustflags = ["-C", "link-arg=-nostartfiles"]
+
+[target.'cfg(target_os = "windows")']
+rustflags = ["-C", "link-args=/ENTRY:_start /SUBSYSTEM:console"]
+
+[target.'cfg(target_os = "macos")']
+rustflags = ["-C", "link-args=-e __start -static -nostartfiles"]
+
+
