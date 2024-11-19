@@ -1,7 +1,7 @@
 # How to run
 
 * bitcoin.conf
-  https://github.com/bitcoin/bitcoin/blob/v28.0rc1/share/examples/bitcoin.conf
+  https://github.com/bitcoin/bitcoin/blob/v28.0/share/examples/bitcoin.conf
 
 ## testnet-4
 * run 
@@ -17,7 +17,7 @@ curl --user username --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method
 
 
 # Reference
-* https://github.com/bitcoin/bitcoin/blob/v28.0rc1/doc/build-unix.md
+* https://github.com/bitcoin/bitcoin/blob/v28.0/doc/build-unix.md
 * https://hub.docker.com/r/bitcoin/bitcoin
 * https://github.com/willcl-ark/bitcoin-core-docker/blob/master/28.0/Dockerfile
 * https://developer.bitcoin.org/reference/rpc/getblockcount.html
