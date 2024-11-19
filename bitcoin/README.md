@@ -1,5 +1,8 @@
 # How to run
 
+* bitcoin.conf
+  https://github.com/bitcoin/bitcoin/blob/v28.0rc1/share/examples/bitcoin.conf
+
 ## testnet-4
 * run 
 ```bash
