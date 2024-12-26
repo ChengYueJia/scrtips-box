@@ -1,5 +1,5 @@
 
-git filter-branch --env-filter '
+git filter-branch -f --env-filter '
 OLD_EMAIL="old_user_email"
 CORRECT_NAME="new_user_name"
 CORRECT_EMAIL="new_user_email"
